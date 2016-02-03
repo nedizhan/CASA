@@ -6,69 +6,69 @@
 
 
     <Button
+        android:id="@+id/button_camera"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:id="@+id/button_camera"
-        android:background="@mipmap/ic_camera"
-        android:layout_below="@+id/imgView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="40dp" />
+        android:layout_below="@+id/imgView"
+        android:layout_marginTop="40dp"
+        android:background="@mipmap/ic_camera" />
 
     <Button
-        android:layout_width="80dp"
-        android:layout_height="80dp"
         android:id="@+id/button_close"
-        android:background="@mipmap/ic_close"
-        android:layout_alignTop="@+id/button_gallery"
-        android:layout_toRightOf="@+id/button_gallery"
-        android:layout_toEndOf="@+id/button_gallery"
-        android:layout_marginLeft="2dp" />
-
-    <Button
         android:layout_width="80dp"
         android:layout_height="80dp"
+        android:layout_alignTop="@+id/button_gallery"
+        android:layout_marginLeft="2dp"
+        android:layout_toEndOf="@+id/button_gallery"
+        android:layout_toRightOf="@+id/button_gallery"
+        android:background="@mipmap/ic_close" />
+
+    <Button
         android:id="@+id/button_gallery"
-        android:background="@mipmap/ic_galeri"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_alignTop="@+id/button_camera"
-        android:layout_toRightOf="@+id/button_camera"
+        android:layout_marginLeft="2dp"
         android:layout_toEndOf="@+id/button_camera"
-        android:layout_marginLeft="2dp" />
+        android:layout_toRightOf="@+id/button_camera"
+        android:background="@mipmap/ic_galeri" />
 
 
     <ImageView
         android:id="@+id/imgView"
         android:layout_width="300dp"
         android:layout_height="250dp"
-        android:layout_weight="61.16"
+        android:layout_alignEnd="@+id/button_resim_ok"
+        android:layout_alignLeft="@+id/textView13"
         android:layout_alignParentTop="true"
         android:layout_alignRight="@+id/button_resim_ok"
-        android:layout_alignEnd="@+id/button_resim_ok"
-        android:visibility="gone"
-        android:layout_alignLeft="@+id/textView13"
-        android:layout_alignStart="@+id/textView13" />
+        android:layout_alignStart="@+id/textView13"
+        android:layout_weight="61.16"
+        android:visibility="gone" />
 
     <TextView
+        android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Lütfen Resim Seçiniz.."
-        android:id="@+id/textView13"
-        android:layout_below="@+id/imgView"
-        android:layout_alignRight="@+id/button_close"
         android:layout_alignEnd="@+id/button_close"
         android:layout_alignLeft="@+id/button_camera"
+        android:layout_alignRight="@+id/button_close"
         android:layout_alignStart="@+id/button_camera"
-        android:layout_marginLeft="10dp" />
+        android:layout_below="@+id/imgView"
+        android:layout_marginLeft="10dp"
+        android:text="Lütfen Resim Seçiniz.."
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <Button
+        android:id="@+id/button_resim_ok"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:id="@+id/button_resim_ok"
-        android:background="@mipmap/ic_ok"
         android:layout_alignTop="@+id/button_close"
-        android:layout_toRightOf="@+id/button_close"
+        android:layout_marginLeft="2dp"
         android:layout_toEndOf="@+id/button_close"
-        android:layout_marginLeft="2dp" />
+        android:layout_toRightOf="@+id/button_close"
+        android:background="@mipmap/ic_ok" />
 
 </RelativeLayout>

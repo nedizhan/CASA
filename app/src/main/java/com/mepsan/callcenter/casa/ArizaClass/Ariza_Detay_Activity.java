@@ -2,17 +2,16 @@ package com.mepsan.callcenter.casa.ArizaClass;
 
 import android.content.Context;
 import android.content.res.Configuration;
-import android.support.design.widget.TabLayout;
+import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.telephony.TelephonyManager;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -21,7 +20,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-
 import android.view.WindowManager;
 import android.widget.TextView;
 
@@ -29,11 +27,9 @@ import com.mepsan.callcenter.casa.R;
 
 public class Ariza_Detay_Activity extends AppCompatActivity {
 
+    public String ArizaId, userId;
     private SectionsPagerAdapter mSectionsPagerAdapter;
     private ViewPager mViewPager;
-    public String ArizaId,userId;
-
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -51,8 +47,8 @@ public class Ariza_Detay_Activity extends AppCompatActivity {
 
         Bundle paketim;
         paketim = getIntent().getExtras();
-        ArizaId    = paketim.getString("id");
-        userId    = paketim.getString("user_id");
+        ArizaId = paketim.getString("id");
+        userId = paketim.getString("user_id");
 
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -64,10 +60,10 @@ public class Ariza_Detay_Activity extends AppCompatActivity {
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
 
 
-        TelephonyManager manager = (TelephonyManager)this.getSystemService(Context.TELEPHONY_SERVICE);
-        if(manager.getPhoneType() == TelephonyManager.PHONE_TYPE_NONE){
+        TelephonyManager manager = (TelephonyManager) this.getSystemService(Context.TELEPHONY_SERVICE);
+        if (manager.getPhoneType() == TelephonyManager.PHONE_TYPE_NONE) {
 
-        }else{
+        } else {
             tabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
         }
         tabLayout.setupWithViewPager(mViewPager);
@@ -83,13 +79,12 @@ public class Ariza_Detay_Activity extends AppCompatActivity {
         });
 
 
-
     }
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if(keyCode == KeyEvent.KEYCODE_BACK){
-            FragmentArizaResimleri.resim=null;
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            FragmentArizaResimleri.resim = null;
         }
         return super.onKeyDown(keyCode, event);
     }
@@ -104,11 +99,25 @@ public class Ariza_Detay_Activity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+
+        // Checks the orientation of the screen
+        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+
+
+        } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {
+
+        }
+    }
+
     public static class PlaceholderFragment extends Fragment {
         private static final String ARG_SECTION_NUMBER = "section_number";
 
         public PlaceholderFragment() {
         }
+
         public static PlaceholderFragment newInstance(int sectionNumber) {
             PlaceholderFragment fragment = new PlaceholderFragment();
             Bundle args = new Bundle();
@@ -137,19 +146,26 @@ public class Ariza_Detay_Activity extends AppCompatActivity {
         public Fragment getItem(int position) {
 
             //return PlaceholderFragment.newInstance(position + 1);
-            switch(position) {
+            switch (position) {
 
-                case 0: FragmentArizaBilgisi a = new FragmentArizaBilgisi();
+                case 0:
+                    FragmentArizaBilgisi a = new FragmentArizaBilgisi();
                     Bundle bundle = new Bundle();
                     bundle.putInt("key", 1);
                     a.setArguments(bundle);
                     return FragmentArizaBilgisi.newInstance(ArizaId);
-                case 1: return FragmentArizaUrunler.newInstance(ArizaId);
-                case 2: return FragmentArizaAciklama.newInstance(ArizaId,userId);
-                case 3: return FragmentArizaResimleri.newInstance(ArizaId);
-                case 4: return FragmentArizaFormu.newInstance(ArizaId);
-                case 5: return FragmentArizaKonumu.newInstance(ArizaId);
-                default: return FragmentArizaBilgisi.newInstance(ArizaId);
+                case 1:
+                    return FragmentArizaUrunler.newInstance(ArizaId);
+                case 2:
+                    return FragmentArizaAciklama.newInstance(ArizaId, userId);
+                case 3:
+                    return FragmentArizaResimleri.newInstance(ArizaId);
+                case 4:
+                    return FragmentArizaFormu.newInstance(ArizaId);
+                case 5:
+                    return FragmentArizaKonumu.newInstance(ArizaId);
+                default:
+                    return FragmentArizaBilgisi.newInstance(ArizaId);
             }
         }
 
@@ -175,19 +191,6 @@ public class Ariza_Detay_Activity extends AppCompatActivity {
                     return "Konum";
             }
             return null;
-        }
-    }
-
-    @Override
-    public void onConfigurationChanged(Configuration newConfig) {
-        super.onConfigurationChanged(newConfig);
-
-        // Checks the orientation of the screen
-        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
-
-
-        } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT){
-
         }
     }
 }
