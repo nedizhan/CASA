@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@mipmap/background">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right">
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="%0"
+                android:id="@+id/batterypercent"
+                android:textColor="#ffffff"
+                android:textSize="12dp"
+                android:layout_marginTop="-5dp" />
+
+            <Button
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/battery"
+                android:layout_marginRight="10dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:longClickable="false"
+        android:measureWithLargestChild="false"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:contextClickable="false">
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:id="@+id/ariza"
+                android:background="@mipmap/ic_ariza" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Arıza"
+                android:id="@+id/textView"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#ffffff"
+                android:textSize="14dp" />
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:id="@+id/malzeme"
+                android:background="@mipmap/ic_malzeme" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Malzeme"
+                android:id="@+id/textView4"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="14dp" />
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:id="@+id/kontrol"
+                android:background="@mipmap/ic_kontrol" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Kontrol"
+                android:id="@+id/textView5"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp">
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:id="@+id/montaj"
+                android:background="@mipmap/ic_montaj" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Montaj"
+                android:id="@+id/textView2"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="14dp" />
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:id="@+id/demontaj"
+                android:background="@mipmap/ic_demontaj" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Demontaj"
+                android:id="@+id/textView6"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="14dp" />
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:id="@+id/profil"
+                android:background="@mipmap/ic_user" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Profil"
+                android:id="@+id/textView7"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:id="@+id/istasyon"
+                android:background="@mipmap/ic_istasyon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="İstasyon"
+                android:id="@+id/textView3"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="14dp" />
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:id="@+id/bakim"
+                android:background="@mipmap/ic_bakim" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Bakım"
+                android:id="@+id/textView8"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="14dp" />
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:id="@+id/cikis"
+                android:background="@mipmap/ic_close" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Çıkış"
+                android:id="@+id/textView9"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="14dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

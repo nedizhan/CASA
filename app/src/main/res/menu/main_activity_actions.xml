@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- Arama, eylem düğmesi olarak görülebilir -->
+    <item android:id="@+id/acik_ariza"
+        android:icon="@mipmap/ic_ariza"
+        android:title="@string/acik_arizalar"
+        android:showAsAction="ifRoom" />
+    <!-- Ayarlar, daima taşan eylemler bölümünde durabilir -->
+    <item android:id="@+id/onay_bekleyen_ariza"
+        android:title="@string/oney_bekleyen_arizalar"
+        android:showAsAction="never" />
+</menu>

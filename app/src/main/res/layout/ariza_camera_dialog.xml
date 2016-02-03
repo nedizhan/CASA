@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/button_camera"
+        android:background="@mipmap/ic_camera"
+        android:layout_below="@+id/imgView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="40dp" />
+
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/button_close"
+        android:background="@mipmap/ic_close"
+        android:layout_alignTop="@+id/button_gallery"
+        android:layout_toRightOf="@+id/button_gallery"
+        android:layout_toEndOf="@+id/button_gallery"
+        android:layout_marginLeft="2dp" />
+
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/button_gallery"
+        android:background="@mipmap/ic_galeri"
+        android:layout_alignTop="@+id/button_camera"
+        android:layout_toRightOf="@+id/button_camera"
+        android:layout_toEndOf="@+id/button_camera"
+        android:layout_marginLeft="2dp" />
+
+
+    <ImageView
+        android:id="@+id/imgView"
+        android:layout_width="300dp"
+        android:layout_height="250dp"
+        android:layout_weight="61.16"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/button_resim_ok"
+        android:layout_alignEnd="@+id/button_resim_ok"
+        android:visibility="gone"
+        android:layout_alignLeft="@+id/textView13"
+        android:layout_alignStart="@+id/textView13" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Lütfen Resim Seçiniz.."
+        android:id="@+id/textView13"
+        android:layout_below="@+id/imgView"
+        android:layout_alignRight="@+id/button_close"
+        android:layout_alignEnd="@+id/button_close"
+        android:layout_alignLeft="@+id/button_camera"
+        android:layout_alignStart="@+id/button_camera"
+        android:layout_marginLeft="10dp" />
+
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/button_resim_ok"
+        android:background="@mipmap/ic_ok"
+        android:layout_alignTop="@+id/button_close"
+        android:layout_toRightOf="@+id/button_close"
+        android:layout_toEndOf="@+id/button_close"
+        android:layout_marginLeft="2dp" />
+
+</RelativeLayout>

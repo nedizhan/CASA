@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="649dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/layout_grid1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Arıza Öncesi Çekilen Resimler"
+                android:id="@+id/textView11"
+                android:textSize="25dp"
+                android:layout_alignBottom="@+id/button"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:gravity="left|center"
+                android:layout_toRightOf="@+id/btn_refresh"
+                android:layout_toEndOf="@+id/btn_refresh" />
+
+            <Button
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:id="@+id/button"
+                android:background="@mipmap/ic_camera"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dip"
+                android:background="@color/colorPrimary"
+                android:id="@+id/view2"
+                android:layout_below="@+id/button"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <GridView
+                android:id="@+id/grid_view"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:numColumns="auto_fit"
+                android:columnWidth="200dp"
+                android:horizontalSpacing="10dp"
+                android:verticalSpacing="10dp"
+                android:gravity="center"
+                android:stretchMode="columnWidth"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/view2"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp">
+            </GridView>
+
+            <Button
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:id="@+id/btn_refresh"
+                android:background="@mipmap/ic_refresh"
+                android:layout_alignBottom="@+id/view2"
+                android:layout_toRightOf="@+id/button"
+                android:layout_toEndOf="@+id/button"
+                android:visibility="gone" />
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressBar_once"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone"
+                android:indeterminate="false" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:id="@+id/view6"
+            android:layout_below="@+id/button"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/layout_grid2">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:id="@+id/button3"
+                android:background="@mipmap/ic_camera"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Arıza Giderildikten Sonra Çekilen Resimler"
+                android:id="@+id/textView12"
+                android:textSize="25dp"
+                android:layout_toRightOf="@+id/btn_ref_sonra"
+                android:layout_toEndOf="@+id/btn_ref_sonra"
+                android:layout_alignParentTop="true"
+                android:visibility="visible"
+                android:gravity="left|center"
+                android:layout_alignBottom="@+id/button3" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dip"
+                android:background="@color/colorPrimary"
+                android:id="@+id/view3"
+                android:layout_below="@+id/button3"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <Button
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:id="@+id/btn_ref_sonra"
+                android:background="@mipmap/ic_refresh"
+                android:visibility="gone"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/button3"
+                android:layout_toEndOf="@+id/button3" />
+
+            <GridView
+                android:id="@+id/grid_view1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:numColumns="auto_fit"
+                android:columnWidth="200dp"
+                android:horizontalSpacing="10dp"
+                android:verticalSpacing="10dp"
+                android:gravity="center"
+                android:stretchMode="columnWidth"
+                android:layout_below="@+id/view3"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp">
+            </GridView>
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressBar_sonra"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

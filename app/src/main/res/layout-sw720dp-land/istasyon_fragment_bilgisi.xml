@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:id="@+id/imageView"
+            android:src="@mipmap/ic_istasyon"
+            android:layout_gravity="left"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="ARIZA KODU"
+            android:id="@+id/ist_kodu"
+            android:layout_marginBottom="84dp"
+            android:layout_alignBottom="@+id/imageView"
+            android:layout_toRightOf="@+id/imageView"
+            android:layout_toEndOf="@+id/imageView"
+            android:textSize="30dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Transfer Tarihi :"
+            android:id="@+id/textView30"
+            android:textStyle="bold"
+            android:textSize="12dp"
+            android:layout_alignTop="@+id/ist_transfer_tar"
+            android:layout_toRightOf="@+id/ist_kodu"
+            android:layout_toEndOf="@+id/ist_kodu"
+            android:layout_marginLeft="100dp"
+            android:layout_marginStart="126dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Ürün Grubu :"
+            android:id="@+id/textView31"
+            android:textStyle="bold"
+            android:textSize="12dp"
+            android:layout_below="@+id/textView26"
+            android:layout_marginTop="3dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="İstasyon :"
+            android:id="@+id/textView32"
+            android:textStyle="bold"
+            android:textSize="12dp"
+            android:layout_alignTop="@+id/imageView"
+            android:layout_alignRight="@+id/textView38"
+            android:layout_alignEnd="@+id/textView38" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Şehir :"
+            android:id="@+id/textView33"
+            android:layout_below="@+id/textView32"
+            android:layout_alignRight="@+id/textView32"
+            android:layout_alignEnd="@+id/textView32"
+            android:layout_marginTop="3dp"
+            android:textStyle="bold"
+            android:textSize="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="İlçe :"
+            android:id="@+id/textView34"
+            android:layout_below="@+id/textView33"
+            android:layout_alignRight="@+id/textView33"
+            android:layout_alignEnd="@+id/textView33"
+            android:layout_marginTop="3dp"
+            android:textStyle="bold"
+            android:textSize="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Telefon :"
+            android:id="@+id/textView35"
+            android:layout_below="@+id/textView34"
+            android:layout_alignRight="@+id/textView34"
+            android:layout_alignEnd="@+id/textView34"
+            android:layout_marginTop="3dp"
+            android:textStyle="bold"
+            android:textSize="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Adres :"
+            android:id="@+id/textView36"
+            android:layout_below="@+id/textView35"
+            android:layout_alignRight="@+id/textView35"
+            android:layout_alignEnd="@+id/textView35"
+            android:layout_marginTop="3dp"
+            android:textStyle="bold"
+            android:textSize="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/ist_transfer_tar"
+            android:textSize="12dp"
+            android:layout_above="@+id/textView38"
+            android:layout_alignLeft="@+id/ist_adres"
+            android:layout_alignStart="@+id/ist_adres" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/ist_urun_grubu"
+            android:textSize="12dp"
+            android:layout_above="@+id/ist_akaryakit"
+            android:layout_toRightOf="@+id/textView31"
+            android:layout_toEndOf="@+id/textView31"
+            android:layout_alignTop="@+id/textView31"
+            android:layout_marginLeft="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/ist_istasyon"
+            android:layout_above="@+id/textView33"
+            android:layout_toRightOf="@+id/textView30"
+            android:layout_toEndOf="@+id/textView30"
+            android:layout_marginLeft="5dp"
+            android:textSize="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/ist_sehir"
+            android:layout_alignBottom="@+id/textView33"
+            android:layout_toRightOf="@+id/textView33"
+            android:layout_toEndOf="@+id/textView33"
+            android:layout_marginLeft="5dp"
+            android:textSize="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/ist_ilce"
+            android:layout_alignBottom="@+id/textView34"
+            android:layout_toRightOf="@+id/textView33"
+            android:layout_toEndOf="@+id/textView33"
+            android:layout_marginLeft="5dp"
+            android:textSize="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/ist_telefon"
+            android:layout_above="@+id/textView36"
+            android:layout_toRightOf="@+id/textView33"
+            android:layout_toEndOf="@+id/textView33"
+            android:layout_marginLeft="5dp"
+            android:textSize="12dp" />
+
+        <TextView
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/ist_adres"
+            android:textSize="12dp"
+            android:lines="5"
+            android:layout_alignTop="@+id/textView36"
+            android:layout_toRightOf="@+id/textView35"
+            android:layout_toEndOf="@+id/textView35"
+            android:layout_marginLeft="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Durum :"
+            android:id="@+id/textView26"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            android:gravity="right"
+            android:layout_below="@+id/ist_kodu"
+            android:layout_alignRight="@+id/textView27"
+            android:layout_alignEnd="@+id/textView27" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Akaryakıt :"
+            android:id="@+id/textView27"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            android:layout_below="@+id/textView31"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="3dp"
+            android:layout_alignRight="@+id/textView31"
+            android:layout_alignEnd="@+id/textView31"
+            android:gravity="right" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="LPG :"
+            android:id="@+id/textView28"
+            android:layout_below="@+id/textView27"
+            android:layout_toLeftOf="@+id/ist_statu"
+            android:layout_toStartOf="@+id/ist_statu"
+            android:layout_marginTop="3dp"
+            android:textSize="12dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="CNG :"
+            android:id="@+id/textView29"
+            android:layout_below="@+id/textView28"
+            android:layout_toLeftOf="@+id/ist_statu"
+            android:layout_toStartOf="@+id/ist_statu"
+            android:layout_marginTop="3dp"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/ist_statu"
+            android:layout_alignTop="@+id/textView26"
+            android:layout_toRightOf="@+id/textView26"
+            android:layout_toEndOf="@+id/textView26"
+            android:layout_marginLeft="5dp"
+            android:textSize="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/ist_akaryakit"
+            android:layout_above="@+id/textView28"
+            android:layout_toRightOf="@+id/textView27"
+            android:layout_toEndOf="@+id/textView27"
+            android:layout_marginLeft="5dp"
+            android:textSize="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/ist_lpg"
+            android:layout_above="@+id/textView29"
+            android:textSize="12dp"
+            android:layout_alignLeft="@+id/ist_akaryakit"
+            android:layout_alignStart="@+id/ist_akaryakit" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/ist_cng"
+            android:layout_alignTop="@+id/textView29"
+            android:textSize="12dp"
+            android:layout_alignLeft="@+id/ist_lpg"
+            android:layout_alignStart="@+id/ist_lpg" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/ist_cng_lisans"
+            android:layout_alignBottom="@+id/textView41"
+            android:textSize="12dp"
+            android:layout_alignLeft="@+id/ist_lpg_lisans"
+            android:layout_alignStart="@+id/ist_lpg_lisans" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/ist_lpg_lisans"
+            android:layout_alignTop="@+id/textView39"
+            android:textSize="12dp"
+            android:layout_alignLeft="@+id/ist_akaryakit_lisans"
+            android:layout_alignStart="@+id/ist_akaryakit_lisans" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/ist_akaryakit_lisans"
+            android:layout_above="@+id/textView39"
+            android:textSize="12dp"
+            android:layout_alignLeft="@+id/ist_eski_istasyon"
+            android:layout_alignStart="@+id/ist_eski_istasyon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/ist_eski_istasyon"
+            android:textSize="12dp"
+            android:layout_alignTop="@+id/textView37"
+            android:layout_toRightOf="@+id/textView37"
+            android:layout_toEndOf="@+id/textView37"
+            android:layout_marginLeft="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="CNG Lisans :"
+            android:id="@+id/textView41"
+            android:layout_below="@+id/textView39"
+            android:layout_alignRight="@+id/textView39"
+            android:layout_alignEnd="@+id/textView39"
+            android:layout_marginTop="3dp"
+            android:textStyle="bold"
+            android:textSize="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="LPG Lisans :"
+            android:id="@+id/textView39"
+            android:textStyle="bold"
+            android:textSize="12dp"
+            android:layout_above="@+id/textView29"
+            android:layout_alignRight="@+id/textView38"
+            android:layout_alignEnd="@+id/textView38"
+            android:layout_marginTop="3dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Akaryakıt Lisans :"
+            android:id="@+id/textView38"
+            android:textStyle="bold"
+            android:textSize="12dp"
+            android:layout_above="@+id/textView39"
+            android:layout_alignRight="@+id/textView30"
+            android:layout_alignEnd="@+id/textView30"
+            android:layout_marginTop="3dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Eski İstasyon :"
+            android:id="@+id/textView37"
+            android:textStyle="bold"
+            android:textSize="12dp"
+            android:layout_below="@+id/imageView"
+            android:layout_alignRight="@+id/textView41"
+            android:layout_alignEnd="@+id/textView41" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- Arama, eylem düğmesi olarak görülebilir -->
+    <item android:id="@+id/harita_gorunumu"
+        android:icon="@mipmap/ic_ariza"
+        android:title="@string/harita_gorunumu"
+        android:showAsAction="ifRoom" />
+    <!-- Ayarlar, daima taşan eylemler bölümünde durabilir -->
+    <item android:id="@+id/liste_gorunumu"
+        android:title="@string/liste_gorunumu"
+        android:showAsAction="never" />
+</menu>

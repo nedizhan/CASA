@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Takılan Ürün Adı :"
+        android:id="@+id/textView42"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignBottom="@+id/spinner"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center|right"
+        android:layout_toLeftOf="@+id/editText"
+        android:layout_toStartOf="@+id/editText" />
+
+    <Spinner
+        android:layout_width="300dp"
+        android:layout_height="65dp"
+        android:id="@+id/spinner"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="5dp"
+        android:layout_alignLeft="@+id/editText"
+        android:layout_alignStart="@+id/editText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Takılan Ürün Seri No :"
+        android:id="@+id/textView48"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView42"
+        android:gravity="center|right"
+        android:layout_alignBottom="@+id/editText"
+        android:layout_marginLeft="15dp" />
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:layout_below="@+id/spinner"
+        android:layout_toRightOf="@+id/textView48" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Sökülen Ürün Adı :"
+        android:id="@+id/textView49"
+        android:gravity="center|right"
+        android:layout_below="@+id/textView48"
+        android:layout_alignLeft="@+id/textView42"
+        android:layout_alignStart="@+id/textView42"
+        android:layout_alignRight="@+id/textView42"
+        android:layout_alignEnd="@+id/textView42"
+        android:layout_alignBottom="@+id/spinner3"
+        android:layout_marginTop="5dp" />
+
+    <Spinner
+        android:layout_width="300dp"
+        android:layout_height="65dp"
+        android:id="@+id/spinner3"
+        android:layout_below="@+id/textView48"
+        android:layout_alignRight="@+id/editText2"
+        android:layout_alignEnd="@+id/editText2"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Sökülen Seri No :"
+        android:id="@+id/textView50"
+        android:layout_alignLeft="@+id/textView49"
+        android:layout_alignStart="@+id/textView49"
+        android:layout_toLeftOf="@+id/spinner3"
+        android:layout_toStartOf="@+id/spinner3"
+        android:layout_alignBottom="@+id/editText2"
+        android:gravity="center|right"
+        android:layout_alignTop="@+id/editText2" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText2"
+        android:layout_below="@+id/spinner3"
+        android:layout_alignRight="@+id/editText"
+        android:layout_alignEnd="@+id/editText"
+        android:layout_toRightOf="@+id/textView48"
+        android:layout_toEndOf="@+id/textView48" />
+
+    <Button
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/stok_ekle_btn"
+        android:layout_below="@+id/editText2"
+        android:layout_alignRight="@+id/editText2"
+        android:layout_alignEnd="@+id/editText2"
+        android:background="@mipmap/ic_ok" />
+
+    <Button
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/stok_iptal_btn"
+        android:layout_alignTop="@+id/stok_ekle_btn"
+        android:layout_toLeftOf="@+id/stok_ekle_btn"
+        android:layout_toStartOf="@+id/stok_ekle_btn"
+        android:background="@mipmap/ic_iptal" />
+
+    <Button
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/stok_sil_btn"
+        android:layout_alignTop="@+id/stok_iptal_btn"
+        android:layout_toLeftOf="@+id/stok_iptal_btn"
+        android:layout_toStartOf="@+id/stok_iptal_btn"
+        android:background="@mipmap/ic_sil" />
+
+</RelativeLayout>

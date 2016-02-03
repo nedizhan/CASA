@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Yeni Stok Adı Seçiniz :"
+        android:id="@+id/textView54"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center" />
+
+    <Spinner
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:id="@+id/spinner2"
+        android:layout_alignTop="@+id/textView54"
+        android:layout_toRightOf="@+id/textView54"
+        android:layout_toEndOf="@+id/textView54" />
+
+    <Button
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/stok_adi_degistir"
+        android:background="@mipmap/ic_ok"
+        android:layout_below="@+id/spinner2"
+        android:layout_alignRight="@+id/spinner2"
+        android:layout_alignEnd="@+id/spinner2" />
+
+    <Button
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/stok_adi_iptal"
+        android:layout_alignTop="@+id/stok_adi_degistir"
+        android:layout_toLeftOf="@+id/stok_adi_degistir"
+        android:layout_toStartOf="@+id/stok_adi_degistir"
+        android:layout_marginRight="10dp"
+        android:background="@mipmap/ic_iptal" />
+
+</RelativeLayout>

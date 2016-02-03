@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/stoklist_layout"
+        android:background="@drawable/frame"
+        >
+        <ListView
+            android:id="@+id/list"
+            android:layout_height="wrap_content"
+            android:layout_width="250dp">
+        </ListView>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/urunlist_layout"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/frame"
+            android:id="@+id/relativeLayout2"
+            android:layout_marginTop="2dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/txt_stok_adi"
+                android:textSize="20dp"
+                android:textColor="@color/colorPrimary"
+                android:layout_alignParentTop="true"
+                android:layout_alignLeft="@+id/view2"
+                android:layout_alignStart="@+id/view2"
+                android:layout_marginLeft="5dp"
+                android:visibility="gone"
+                android:gravity="center" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dip"
+                android:background="@color/colorPrimary"
+                android:id="@+id/view2"
+                android:visibility="gone"
+                android:layout_below="@+id/txt_stok_adi"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp" />
+
+            <ListView
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:id="@+id/listView"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="5dp"
+                android:layout_below="@+id/view2"
+                android:layout_marginTop="2dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Stok Seçiniz!"
+                android:id="@+id/stok_sectimi"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/frame"
+            android:layout_marginTop="3dp"
+            android:id="@+id/r2">
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:id="@+id/urun_degisikligi_ekle"
+                android:visibility="gone"
+                android:background="@mipmap/ic_urun_ekle"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <ListView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/listView2"
+                android:layout_alignParentBottom="true"
+                android:visibility="visible"
+                android:layout_marginLeft="5dp"
+                android:layout_below="@+id/view4" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Değiştirilen Ürünler"
+                android:id="@+id/txt_deg_urun"
+                android:textSize="18dp"
+                android:textColor="@color/colorPrimary"
+                android:visibility="gone"
+                android:layout_alignBottom="@+id/urun_degisikligi_ekle"
+                android:layout_alignLeft="@+id/textView45"
+                android:layout_alignStart="@+id/textView45"
+                android:layout_alignParentTop="true"
+                android:gravity="center"
+                android:layout_marginLeft="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Ürün Değişikliği Eklenmedi!"
+                android:id="@+id/txt_urun_degis_durumu"
+                android:layout_alignTop="@+id/listView2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="166dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Takılan Ürün Adı"
+                android:id="@+id/textView45"
+                android:layout_below="@+id/txt_deg_urun"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="5dp" />
+
+            <TextView
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Takılan Ürün Seri No"
+                android:id="@+id/textView51"
+                android:layout_alignBottom="@+id/textView45"
+                android:layout_toRightOf="@+id/textView45"
+                android:layout_toEndOf="@+id/textView45"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Sökülen Ürün Adı"
+                android:id="@+id/textView52"
+                android:layout_alignTop="@+id/textView51"
+                android:layout_toRightOf="@+id/textView51"
+                android:layout_toEndOf="@+id/textView51"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Sökülen Ürün Seri No"
+                android:id="@+id/textView53"
+                android:textStyle="bold"
+                android:visibility="gone"
+                android:layout_alignTop="@+id/textView52"
+                android:layout_toRightOf="@+id/textView52"
+                android:layout_toEndOf="@+id/textView52" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dip"
+                android:background="#c0c0c0"
+                android:id="@+id/view4"
+                android:visibility="gone"
+                android:layout_below="@+id/textView45"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="2dp" />
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Stok Ariza Bilgisi Henüz Girilmemiştir!"
+        android:id="@+id/textView56"
+        android:gravity="center"
+        android:visibility="gone" />
+
+
+</LinearLayout>
